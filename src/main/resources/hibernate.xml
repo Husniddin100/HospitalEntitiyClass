@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">jdbc_user</property>
+        <property name="hibernate.connection.password">123456</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Hospital</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">create</property>
+        <property name="show_sql">true
+        </property>
+        <!-- MAPPINGS -->
+        <mapping class="org.example.Entitiy.Employee"/>
+        <mapping class="org.example.Entitiy.Ambulance"/>
+        <mapping class="org.example.Entitiy.BaseEntity"/>
+        <mapping class="org.example.Entitiy.Hospital"/>
+        <mapping class="org.example.Entitiy.EMS"/>
+        <mapping class="org.example.Entitiy.WorkingShift"/>
+    </session-factory>
+
+</hibernate-configuration>
